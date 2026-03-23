@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 @Table(name = "tb_departamento")
-public class DepartamentosModel {
+public class DepartamentoModel {
 
     @Autowired
     private Long id;
     private String nome;
     private String localizacao;
 
-    DepartamentosModel() {
+    DepartamentoModel() {
 
     }
 
