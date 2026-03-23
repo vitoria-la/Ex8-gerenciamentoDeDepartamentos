@@ -1,16 +1,18 @@
 package com.exercicios.gerenciamentoDeDepartamentos.Models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 @Table(name = "tb_departamento")
 public class DepartamentoModel {
 
-    @Autowired
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "Nome")
     private String nome;
+    @Column(name = "Localizacao")
     private String localizacao;
 
     DepartamentoModel() {
